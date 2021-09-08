@@ -1,0 +1,25 @@
+[package]
+name = "swym-rbtree"
+version = "0.1.0"
+authors = ["tyler <tyler@brainiumstudios.com>"]
+edition = "2018"
+publish = false
+
+[features]
+debug-alloc = ["jemallocator/debug"]
+default = []
+nightly = ["swym/nightly"]
+stats = ["swym/stats"]
+
+[dependencies]
+swym = { path = "../" }
+
+[dev-dependencies]
+criterion = { version = "0.2.11", default-features = false }
+crossbeam-utils = "0.6.5"
+jemallocator = "0.3.2"
+rand = "0.6.5"
+
+[[bench]]
+name = "rbtree"
+harness = false

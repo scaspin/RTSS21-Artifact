@@ -1,0 +1,20 @@
+[package]
+name = "txcell"
+version = "0.1.0"
+authors = ["Jennifer Switzer <jfs@mit.edu>", "Claire Nord <cnord@mit.edu>"]
+edition = "2018"
+
+[dependencies]
+swym = { path = "../../swym" }
+pflock = { path = "../../pflock" }
+
+[dev-dependencies]
+rand = "0.7.3"
+crossbeam-utils = "0.7"
+swym = { path = "../../swym" }
+
+[build-dependencies]
+bindgen = "0.54.0"
+
+[profile.test]
+opt-level = 2
